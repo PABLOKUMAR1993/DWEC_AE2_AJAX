@@ -1,0 +1,7 @@
+{
+  "TAMAÑO": [ 
+    { "name": "Individual", "value": "S" },
+    { "name": "Mediana", "value": "M" },
+    { "name": "Familiar", "value": "L" }
+  ]
+}
