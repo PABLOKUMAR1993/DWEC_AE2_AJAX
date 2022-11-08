@@ -1,8 +1,8 @@
 {
     "INGREDIENTES": [
-        { "nameLabel": "Extra de Queso", "value": "eq", "name": "ingrediente" },
-        { "nameLabel": "Extra de Carne", "value": "ec", "name": "ingrediente" },
-        { "nameLabel": "Extra de Pescado", "value": "ep", "name": "ingrediente" },
-        { "nameLabel": "Extra de Verdura", "value": "ev", "name": "ingrediente" }
+        { "name": "Extra de Queso", "value": "eq" },
+        { "name": "Extra de Carne", "value": "ec" },
+        { "name": "Extra de Pescado", "value": "ep" },
+        { "name": "Extra de Verdura", "value": "ev" }
     ]
 }
