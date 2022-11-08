@@ -12,6 +12,8 @@ window.onload = datosAjax();
 
 function datosAjax() {
 
+    console.log("holi");
+
     // Fichero 1:
 
     let xmlHttpTamanyos = new XMLHttpRequest();
@@ -101,3 +103,10 @@ function mostrarIngredientes(jsonDoc) {
     }
 
 }
+
+// REFRESCO.
+// Llama a la función para cargar los datos de nuevo si el usuario quiere actualizar los datos.
+// Lo he hecho así porque volviendo a llamar a la función "datosAjax()" se me duplican, triplican, etc...
+// todos los datos que vienen del servidor, tal cual funciona, si me da tiempo lo modificaré.
+
+refresco.onclick = () => { location.reload(); };
