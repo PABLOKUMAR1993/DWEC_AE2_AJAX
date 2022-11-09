@@ -1,3 +1,7 @@
 body {
     text-align: center;
 }
+
+#erInputs, #erTamanyo, #erIngredientes {
+    color: red;
+}

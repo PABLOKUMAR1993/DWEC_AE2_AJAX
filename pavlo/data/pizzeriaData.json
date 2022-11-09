@@ -4,5 +4,11 @@
         { "name": "Extra de Carne", "value": "ec" },
         { "name": "Extra de Pescado", "value": "ep" },
         { "name": "Extra de Verdura", "value": "ev" }
-    ]
+    ],
+    "TAMAÑOS": [ 
+        { "name": "Individual", "value": "S" },
+        { "name": "Mediana", "value": "M" },
+        { "name": "Familiar", "value": "L" }
+    ],
+    "PRECIOS": []
 }

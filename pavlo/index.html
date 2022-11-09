@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>AE2 - AJAX - GRUPO01</title>
+
 </head>
+
 <body>
     
     <header>
-        <h1>Pizzeria Grupo 01</h1>
+        <h1>Pizzeria Raúl & Pavlo</h1>
     </header>
     
     <!-- Formulario -->
 
-    <form>
+    <form id="formulario" action="#">
 
         <!-- Datos del Cliente -->
 
-        <section>
+        <section id="sectionDatos">
+
             <h2>Datos del Cliente:</h2>
 
-            <label>
+            <label far="nombre">
                 Nombre:
-                <input type="text" placeholder="Félix"/>
+                <input id="nombre" type="text" placeholder="Félix"/>
             </label>
-            <label>
+            <label far="direccion">
                 Dirección:
-                <input type="text" placeholder="C/ falsa, 123"/>
+                <input id="direccion" type="text" placeholder="C/ falsa, 123"/>
             </label>
-            <label>
+            <label far="telefono">
                 Teléfono:
-                <input type="number" placeholder="123456789"/>
+                <input id="telefono" type="number" placeholder="123456789"/>
             </label>
-            <label>
+            <label far="email">
                 E-mail:
-                <input type="email" placeholder="ejemplo@ejemplo.com"/>
+                <input id="email" type="email" placeholder="ejemplo@ejemplo.com"/>
             </label>
+
+            <div><p id="erInputs"></p></div>
+
         </section>
         
         <!-- Tamaño -->
 
         <section id="sectionTamanyo">
-            <h2>Tamaño de la Pizza:</h2>
+
+            <h2>Tamaño de tu Pizza:</h2>
+            <div><p id="erTamanyo"></p></div>
+        
         </section>
         
         <!-- Ingredientes -->
 
         <section id="sectionIngredientes">
-            <h2>Ingredientes de la Pizza:</h2>
+
+            <h2>Extras para tu Pizza:</h2>
+            <div><p id="erIngredientes"></p></div>
+
         </section>
 
+        <button type="submit">Hacer Pedido</button>
+        <button id="refresco">Refrescar Formulario</button>
+        
     </form>
 
-    <button id="refresco">Refrescar Formulario</button>
-
     <footer>
+
         <p>Grupo 01 - Raúl Herrera & Pavlo Dudnyk</p>
         <a href="https://github.com/PABLOKUMAR1993/DWEC_AE2_AJAX">Repositorio de GutHub</a>
+    
     </footer>
 
 </body>
+
 <script src="./js/main.js"></script>
+<script src="./js/form.js"></script>
+
 </html>

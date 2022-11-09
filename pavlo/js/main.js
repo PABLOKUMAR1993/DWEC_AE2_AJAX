@@ -1,8 +1,7 @@
 // Datos de conexión al server.
 
 const URL_SERVER = "http://127.0.0.1:5500/";
-const RECURSO1 = "pavlo/data/tamanyo.json";
-const RECURSO2 = "pavlo/data/ingredientes.json";
+const RECURSO = "pavlo/data/pizzeriaData.json";
 
 // Llamo a la función que trae la información del server, cuando se ha terminado de cargar la página.
 
@@ -12,35 +11,19 @@ window.onload = datosAjax();
 
 function datosAjax() {
 
-    console.log("holi");
-
     // Fichero 1:
 
-    let xmlHttpTamanyos = new XMLHttpRequest();
+    let jsonHttpTamanyos = new XMLHttpRequest();
 
-    xmlHttpTamanyos.open('GET', URL_SERVER + RECURSO1, true);
-    xmlHttpTamanyos.send(null);
-    xmlHttpTamanyos.onreadystatechange = function() {
+    jsonHttpTamanyos.open('GET', URL_SERVER + RECURSO, true);
+    jsonHttpTamanyos.send(null);
+    jsonHttpTamanyos.onreadystatechange = function() {
         if (this.readyState == 4) {
             if (this.status == 200) {
                 // Si la conexión es exitosa, le paso a la siguiente función la información obtenida.
                 mostrarTamanyos(this.responseText);
-            }        
-        }
-    }
-    
-    // Fichero 2:
-
-    let xmlHttpIngredientes = new XMLHttpRequest();
-
-    xmlHttpIngredientes.open('GET', URL_SERVER + RECURSO2, true);
-    xmlHttpIngredientes.send(null);
-    xmlHttpIngredientes.onreadystatechange = function() {
-        if (this.readyState == 4) {
-            if (this.status == 200) {
-                // Si la conexión es exitosa, le paso a la siguiente función la información obtenida.
                 mostrarIngredientes(this.responseText);
-            }        
+            }
         }
     }
 
@@ -56,10 +39,10 @@ function mostrarTamanyos(jsonDoc) {
     let labelTx = [];
     let input = [];
 
-    for (let i=0; i<objeto.TAMAÑO.length; i++) {
+    for (let i=0; i<objeto.TAMAÑOS.length; i++) {
 
         label[i] = document.createElement("label");
-        labelTx[i] = document.createTextNode(`${objeto.TAMAÑO[i].name}`);
+        labelTx[i] = document.createTextNode(`${objeto.TAMAÑOS[i].name}`);
         input[i] = document.createElement("input");
 
         sectionTamanyo.appendChild(label[i]);
@@ -69,7 +52,7 @@ function mostrarTamanyos(jsonDoc) {
 
         input[i].setAttribute("type", "radio");
         input[i].setAttribute("name", "tamanyo");
-        input[i].value = `${objeto.TAMAÑO[i].value}`;
+        input[i].value = `${objeto.TAMAÑOS[i].value}`;
 
     }
 
@@ -105,8 +88,15 @@ function mostrarIngredientes(jsonDoc) {
 }
 
 // REFRESCO.
-// Llama a la función para cargar los datos de nuevo si el usuario quiere actualizar los datos.
 // Lo he hecho así porque volviendo a llamar a la función "datosAjax()" se me duplican, triplican, etc...
 // todos los datos que vienen del servidor, tal cual funciona, si me da tiempo lo modificaré.
 
 refresco.onclick = () => { location.reload(); };
+
+
+
+
+
+
+
+
