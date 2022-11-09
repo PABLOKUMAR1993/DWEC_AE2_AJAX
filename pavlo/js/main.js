@@ -11,18 +11,16 @@ window.onload = datosAjax();
 
 function datosAjax() {
 
-    // Fichero 1:
+    let jsonHttp = new XMLHttpRequest();
 
-    let jsonHttpTamanyos = new XMLHttpRequest();
-
-    jsonHttpTamanyos.open('GET', URL_SERVER + RECURSO, true);
-    jsonHttpTamanyos.send(null);
-    jsonHttpTamanyos.onreadystatechange = function() {
+    jsonHttp.open("GET", URL_SERVER + RECURSO, true);
+    jsonHttp.send(null);
+    jsonHttp.onreadystatechange = function() {
         if (this.readyState == 4) {
             if (this.status == 200) {
-                // Si la conexión es exitosa, le paso a la siguiente función la información obtenida.
-                mostrarTamanyos(this.responseText);
-                mostrarIngredientes(this.responseText);
+                // Si la conexión es exitosa, le paso a las siguientes funciónes la información obtenida.
+                mostrarTamanyos(JSON.parse(this.responseText));
+                mostrarIngredientes(JSON.parse(this.responseText));
             }
         }
     }
@@ -32,17 +30,15 @@ function datosAjax() {
 // Esta función crea los elementos en el DOM para mostrar los tamaños de las pizzas.
 
 function mostrarTamanyos(jsonDoc) {
-
-    let objeto = JSON.parse(jsonDoc);
     
     let label = [];
     let labelTx = [];
     let input = [];
 
-    for (let i=0; i<objeto.TAMAÑOS.length; i++) {
+    for (let i=0; i<jsonDoc.TAMAÑOS.length; i++) {
 
         label[i] = document.createElement("label");
-        labelTx[i] = document.createTextNode(`${objeto.TAMAÑOS[i].name}`);
+        labelTx[i] = document.createTextNode(`${jsonDoc.TAMAÑOS[i].name}`);
         input[i] = document.createElement("input");
 
         sectionTamanyo.appendChild(label[i]);
@@ -52,7 +48,7 @@ function mostrarTamanyos(jsonDoc) {
 
         input[i].setAttribute("type", "radio");
         input[i].setAttribute("name", "tamanyo");
-        input[i].value = `${objeto.TAMAÑOS[i].value}`;
+        input[i].value = `${jsonDoc.TAMAÑOS[i].value}`;
 
     }
 
@@ -61,17 +57,15 @@ function mostrarTamanyos(jsonDoc) {
 // Esta función crea los elementos en el DOM para mostrar los ingredientes para las pizzas.
 
 function mostrarIngredientes(jsonDoc) {
-
-    let objeto = JSON.parse(jsonDoc);
     
     let label = [];
     let labelTx = [];
     let input = [];
 
-    for (let i=0; i<objeto.INGREDIENTES.length; i++) {
+    for (let i=0; i<jsonDoc.INGREDIENTES.length; i++) {
 
         label[i] = document.createElement("label");
-        labelTx[i] = document.createTextNode(`${objeto.INGREDIENTES[i].name}`);
+        labelTx[i] = document.createTextNode(`${jsonDoc.INGREDIENTES[i].name}`);
         input[i] = document.createElement("input");
 
         sectionIngredientes.appendChild(label[i]);
@@ -81,7 +75,7 @@ function mostrarIngredientes(jsonDoc) {
 
         input[i].setAttribute("type", "checkbox");
         input[i].setAttribute("name", "ingrediente");
-        input[i].value = `${objeto.INGREDIENTES[i].value}`;
+        input[i].value = `${jsonDoc.INGREDIENTES[i].value}`;
 
     }
 
@@ -89,7 +83,7 @@ function mostrarIngredientes(jsonDoc) {
 
 // REFRESCO.
 // Lo he hecho así porque volviendo a llamar a la función "datosAjax()" se me duplican, triplican, etc...
-// todos los datos que vienen del servidor, tal cual funciona, si me da tiempo lo modificaré.
+// todos los datos que vienen del servidor, tal cual funciona.
 
 refresco.onclick = () => { location.reload(); };
 
