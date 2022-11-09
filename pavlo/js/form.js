@@ -94,9 +94,9 @@ function ingredientes() {
 
 }
 
+// Necesito acceder de nuevo al JSON con los datos de los precios.
 function obtenerTotal() {
 
-    // Necesito acceder de nuevo al JSON con los datos de los precios.
     let jsonHttp = new XMLHttpRequest();
 
     jsonHttp.open("GET", URL_SERVER + RECURSO, true);
@@ -112,12 +112,14 @@ function obtenerTotal() {
 
 }
 
-
 function mostrarTotal(jsonDoc) {
     
+    // Guardo o acumulo aquí los precios.
     let precioTamanyo;
     let precioIngredientes = 0;
 
+    // Si algún array tiene un 1 en alguna posición, esque ese ingrediente o tamaño ha sido marcado.
+    // La posición de ese 1, coincidira la posición del precio del tamaño o ingrediente en la lista.
     for (let i=0; i<jsonDoc.TAMAÑOS.length; i++) {
         if (tamanyoElegido[i] == 1) precioTamanyo = jsonDoc.TAMAÑOS[i].precio;
     }
@@ -126,6 +128,7 @@ function mostrarTotal(jsonDoc) {
         if (ingElegidosPrecio[i] == 1) precioIngredientes += jsonDoc.INGREDIENTES[i].precio;
     }
 
+    // Muestro el precio.
     console.log("Precio Tamaño: " + precioTamanyo);
     console.log("Precio Ingredientes: " + precioIngredientes);
     
