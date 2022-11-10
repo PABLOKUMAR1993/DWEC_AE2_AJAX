@@ -44,11 +44,12 @@ function mostrarTamanyos(jsonDoc) {
         labelTx[i] = document.createTextNode(`${jsonDoc.TAMAÑOS[i].name}`);
         input[i] = document.createElement("input");
 
-        sectionTamanyo.appendChild(label[i]);
+        contenedorTamanyos.appendChild(label[i]);
 
         label[i].appendChild(labelTx[i]);
         label[i].appendChild(input[i]);
 
+        input[i].setAttribute("class", "tamanyo");
         input[i].setAttribute("type", "radio");
         input[i].setAttribute("name", "tamanyo");
         input[i].value = `${jsonDoc.TAMAÑOS[i].value}`;
@@ -61,26 +62,34 @@ function mostrarTamanyos(jsonDoc) {
 // Esta función crea los elementos en el DOM para mostrar los ingredientes para las pizzas.
 
 function mostrarIngredientes(jsonDoc) {
-    
-    let label = [];
-    let labelTx = [];
+
+    let tr1 = document.createElement("tr");
+    let tr2 = document.createElement("tr");
+    tablaIngredientes.appendChild(tr1);
+    tablaIngredientes.appendChild(tr2);
+
+    let th = [];
+    let thTx = [];
+    let td = [];
     let input = [];
 
     for (let i=0; i<jsonDoc.INGREDIENTES.length; i++) {
 
-        label[i] = document.createElement("label");
-        labelTx[i] = document.createTextNode(`${jsonDoc.INGREDIENTES[i].name}`);
+        th[i] = document.createElement("th");
+        td[i] = document.createElement("td");
         input[i] = document.createElement("input");
+        thTx[i] = document.createTextNode(`${jsonDoc.INGREDIENTES[i].name}`);
 
-        sectionIngredientes.appendChild(label[i]);
+        tr1.appendChild(th[i]);
+        th[i].appendChild(thTx[i]);
+        tr2.appendChild(td[i]);
+        td[i].appendChild(input[i]);
 
-        label[i].appendChild(labelTx[i]);
-        label[i].appendChild(input[i]);
-
+        input[i].setAttribute("class", "ingrediente");
         input[i].setAttribute("type", "checkbox");
         input[i].setAttribute("name", "ingrediente");
         input[i].value = `${jsonDoc.INGREDIENTES[i].value}`;
-
+        
     }
 
 }

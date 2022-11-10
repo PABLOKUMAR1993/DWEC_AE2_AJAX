@@ -40,16 +40,35 @@ function datosCliente() {
     let mensajesError = [];
 
     // Si alguno está vacio, guardo un mensaje en el array.
-    if (nombre.value == "") mensajesError.push("* El Nombre es Obligatorio.");
-    if (direccion.value == "") mensajesError.push("* La Dirección es Obligatoria.");
-    if (telefono.value == "") mensajesError.push("* El Teléfono es Obligatorio.");
-    if (email.value == "") mensajesError.push("* El Email es Obligatorio.");
+    if (nombre.value == "") {
+        mensajesError.push("El Nombre es Obligatorio.");
+    } else {
+        mensajesError.push("");
+    }
+    if (direccion.value == "") {
+        mensajesError.push("La Dirección es Obligatoria.");
+    } else {
+        mensajesError.push("");
+    }
+    if (telefono.value == "") {
+        mensajesError.push("El Teléfono es Obligatorio.");
+    } else {
+        mensajesError.push("");
+    }
+    if (email.value == "") {
+        mensajesError.push("El E-mail es Obligatorio.");
+    } else {
+        mensajesError.push("");
+    }
 
-    // Muestro la totalidad de campos vacios.
-    erInputs.innerHTML = mensajesError.join(" - ");
+    // Muesto avisos de los campos vacios.
+    erInputNombre.innerHTML = mensajesError[0];
+    erInputDireccion.innerHTML = mensajesError[1];
+    erInputTelefono.innerHTML = mensajesError[2];
+    erInputEmail.innerHTML = mensajesError[3];
 
     // Si no hay mensajes de error, devuelvo true.
-    if (mensajesError == "") return true;
+    if (mensajesError[0] == "" && mensajesError[1] == "" && mensajesError[2] == "" && mensajesError[3] == "") return true;
     else return false;
 
 }
@@ -141,6 +160,8 @@ function mostrarTotal(jsonDoc) {
     for (let i=0; i<jsonDoc.INGREDIENTES.length; i++) {
         if (ingElegidosPrecio[i] == 1) precioIngredientes += jsonDoc.INGREDIENTES[i].precio;
     }
+
+    console.log("estoy dentro");
 
     // Muestro el precio.
     agradecimiento.innerHTML = "¡Gracias! Hemos recibido tu pedido correctamente."

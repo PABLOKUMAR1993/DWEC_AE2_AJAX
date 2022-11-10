@@ -1,7 +1,184 @@
+/*
+    COLORS:
+    #1 EFF5F5. - BG
+    #2 D6E4E5. - BG2
+    #3 497174. - Encabezados Secundarios.
+    #4 EB6440. - Encabezados Primarios.
+    #5 223436. - Textos
+
+    font-family: roboto-slab,serif;
+    font-weight: 300  /  400  /  700;
+    font-style: normal;
+
+*/
+
+
+/* GENERAL */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+h1 {
+    font-family: roboto-slab,serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #EB6440;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: roboto-slab,serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #497174;
+    font-size: 2em;
+    margin: 40px 0 20px 0;
+}
+
+h3 {
+    font-family: roboto-slab,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #223436;
+    font-size: 1.65em;
+    margin: 30px 0 15px 0;
+}
+
+span {
+    color: #EB6440;
+}
+
+h4 {
+    font-family: roboto-slab,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #EB6440;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-family: roboto-slab,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #223436;
+    font-size: 1.4em;
+    margin: 30px 0 15px 0;
+}
+
+h6 {
+    font-family: roboto-slab,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #EB6440;
+    font-size: 1.5em;
+}
+
+label, th {
+    font-family: roboto-slab,serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #223436;
+    font-size: 1.5em;
+}
+
+a {
+    font-family: roboto-slab,serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #497174;
+    font-size: 1em;
+    text-decoration: underline;
+    margin-top: 1vh;
+}
+
+button {
+    width: 175px;
+    height: 50px;
+    font-family: roboto-slab,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #EFF5F5;
+    background-color: #EB6440;
+    font-size: 1em;
+    border: none;
+    margin: 40px 10px 0 10px;
+}
+
+th, td {
+    padding: 10px 0 10px 0;
+}
+
+
+/* IZQUIERDA */
+
+
+.izquierda {
+    text-align: center;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EFF5F5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.datoCliente {
+    width: 20vw;
+    height: 2vh;
+    margin: 0 0 10px 0;
+}
+
+#sectionDatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#refresco {
+    background-color: #497174;
+}
+
+.tamanyo {
+    margin: 0 30px 0 15px;
+}
+
+#sectionIngredientes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* DERECHA */
+
+
+.derecha {
+    height: 100vh;
+    width: 50vw;
+    background-color: #D6E4E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-#erInputs, #erTamanyo, #erIngredientes {
-    color: red;
+img {
+    width: 25vw;
+    margin: 5vh 0 5vh 0;
 }
+

@@ -7,76 +7,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/flf6tut.css">
     <title>AE2 - AJAX - GRUPO01</title>
 
 </head>
 
 <body>
     
-    <header>
-        <h1>Pizzeria Raúl & Pavlo</h1>
-    </header>
+    <section class="izquierda">
+
+        <!-- Formulario -->
+
+        <form id="formulario" action="#">
+
+            <!-- Datos del Cliente -->
+
+            <section id="sectionDatos">
+
+                <h2>Datos del Cliente:</h2>
+                
+                <label far="nombre"> Nombre:</label>
+                <input class="datoCliente" id="nombre" type="text" placeholder="Félix"/>
+                <h4 id="erInputNombre"></h4> <!-- Si procede, se mostrarán aquí los errores -->
+
+                <label far="direccion">Dirección:</label>
+                <input class="datoCliente" id="direccion" type="text" placeholder="C/ falsa, 123"/>
+                <h4 id="erInputDireccion"></h4>
+
+                <label far="telefono">Teléfono:</label>
+                <input class="datoCliente" id="telefono" type="number" placeholder="123456789"/>
+                <h4 id="erInputTelefono"></h4>
+
+                <label far="email">E-mail:</label>
+                <input class="datoCliente" id="email" type="email" placeholder="ejemplo@ejemplo.com"/>
+                <h4 id="erInputEmail"></h4>
+
+            </section>
+            
+            <!-- Tamaño -->
+
+            <section id="sectionTamanyo">
+                <h2>Tamaño de tu Pizza:</h2>
+                <div id="contenedorTamanyos"></div>
+                <div><h4 id="erTamanyo"></h4></div>
+            </section>
+            
+            <!-- Ingredientes -->
+
+            <section id="sectionIngredientes">
+                <h2>Extras para tu Pizza:</h2>
+                <table id="tablaIngredientes"></table>
+                <div><h4 id="erIngredientes"></h4></div>
+            </section>
+
+
+            <button type="submit">Hacer Pedido</button>
+            <button id="refresco">Actualizar Datos</button>
+            
+        </form>
+
+        <!-- Total del pedido, si procede -->
+
+        <section>
+            <h3 id="agradecimiento"></h3>
+            <h5 id="total"></h5>
+        </section>
     
-    <!-- Formulario -->
-
-    <form id="formulario" action="#">
-
-        <!-- Datos del Cliente -->
-
-        <section id="sectionDatos">
-
-            <h2>Datos del Cliente:</h2>
-            <!-- Si procede, se mostrarán aquí los errores -->
-            <div><h4 id="erInputs"></h4></div>
-
-            <label far="nombre">
-                Nombre:
-                <input id="nombre" type="text" placeholder="Félix"/>
-            </label>
-            <label far="direccion">
-                Dirección:
-                <input id="direccion" type="text" placeholder="C/ falsa, 123"/>
-            </label>
-            <label far="telefono">
-                Teléfono:
-                <input id="telefono" type="number" placeholder="123456789"/>
-            </label>
-            <label far="email">
-                E-mail:
-                <input id="email" type="email" placeholder="ejemplo@ejemplo.com"/>
-            </label>
-
-        </section>
-        
-        <!-- Tamaño -->
-
-        <section id="sectionTamanyo">
-            <h2>Tamaño de tu Pizza:</h2>
-            <div><h4 id="erTamanyo"></h4></div>
-        </section>
-        
-        <!-- Ingredientes -->
-
-        <section id="sectionIngredientes">
-            <h2>Extras para tu Pizza:</h2>
-            <div><h4 id="erIngredientes"></h4></div>
-        </section>
-
-        <button type="submit">Hacer Pedido</button>
-        <button id="refresco">Refrescar Formulario</button>
-        
-    </form>
-
-    <!-- Total del pedido, si procede -->
-    <section>
-        <h3 id="agradecimiento"></h3>
-        <h5 id="total"></h5>
     </section>
 
-    <footer>
-        <p>Grupo 01 - Raúl Herrera & Pavlo Dudnyk</p>
-        <a href="https://github.com/PABLOKUMAR1993/DWEC_AE2_AJAX">Repositorio de GutHub</a>
-    </footer>
+    <section class="derecha">
+
+        <h1>Pizzeria<br />Raúl & Pavlo</h1>
+        <img src="./img/logoPizzeria.svg" alt="Imágen a modo de logo"/>
+        <h6>Grupo 01<br />Raúl Herrera & Pavlo Dudnyk</h6>
+        <a href="https://github.com/PABLOKUMAR1993/DWEC_AE2_AJAX" target="_blank">REPOSITORIO DE GITHUB</a>
+
+    </section>
 
 </body>
 
