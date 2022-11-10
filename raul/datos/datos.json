@@ -1,0 +1,15 @@
+{
+    "ING": [
+        { "name": "Queso", "value": "1" },
+        { "name": "Carne", "value": "1" },
+        { "name": "Pimiento", "value": "1" },
+        { "name": "Aceituna", "value": "1" }
+    ],
+    
+
+    "TAM": [ 
+    { "name": "Pequeña", "value": "5" },
+    { "name": "Mediana", "value": "10" },
+    { "name": "Grande", "value": "15" }
+  ]
+}

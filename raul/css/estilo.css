@@ -1,0 +1,14 @@
+fieldset{
+    border-color:rgb(8, 8, 8);
+   }
+section {
+    width: 30%;
+}
+
+h1 {
+    margin-left: 7%;
+}
+
+legend{
+    margin-left: 5%;
+}

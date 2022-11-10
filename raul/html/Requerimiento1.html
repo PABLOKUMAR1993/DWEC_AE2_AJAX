@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>AE2-AJAX Requerimiento 1</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Pizzeria P&R</h1>
+        <h2>Requerimiento 1</h2>
+    </header>
+
+    <section>
+        <!-- Formulario -->
+
+        <form id="formulario" action="#">
+            <fieldset>
+                <legend>PEDIDO CLIENTE</legend><br>
+                <!-- Datos del Cliente -->
+                <fieldset>
+                    <legend>DATOS DEL CLIENTE</legend><br>
+                    <label for="nombre">Nombre:
+                        <input id= "nombre" type="text" placeholder="nombre"/><br><br>
+                    </label>
+                    <label for="direccion">Dirección:
+                        <input id= "direccion" type="text" placeholder="dirección"/><br><br>
+                    </label>
+                    <label for="telefono">Teléfono:
+                        <input id= "telefono" type="number" placeholder="teléfono"/><br><br>
+                    </label>
+                    <label for="email">Email:
+                        <input id= "email" type="email" placeholder="email"/><br><br>
+                    </label>
+                   
+                </fieldset><br>
+
+                <!-- Tamaño -->
+                <fieldset><br>
+                    <legend>TAMAÑO PIZZA</legend>
+                    <div id="divTamanios"></div>
+                    
+
+                </fieldset><br>
+
+                <!-- Ingredientes -->
+                <fieldset><br>
+                    <legend>INGREDIENTES:</legend>
+                    <div id="divIngredientes"></div>
+                </fieldset><br>
+                <button id="refrescar">Refrescar</button>
+                <button type="submit" onclick="procesarPedido()">Procesar pedido</button>
+            </fieldset>
+        </form><br>
+    </section>
+
+
+    <footer>
+        <p>Grupo 01 Raúl Herrera & Pavlo Dudnyk</p>
+        <a href="https://github.com/PABLOKUMAR1993/DWEC_AE2_AJAX">Pincha aquí para acceder al repositorio de GitHub</a>
+    </footer>
+
+</body>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/formulario1.js"></script>
+
+
+</html>
