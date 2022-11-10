@@ -3,9 +3,11 @@
 const URL_SERVER = "http://127.0.0.1:5500/";
 const RECURSO = "pavlo/data/pizzeriaData.json";
 
+
 // Llamo a la función que trae la información del server, cuando se ha terminado de cargar la página.
 
 window.onload = datosAjax();
+
 
 // Está función conecta con el server y obtiene la información de dos ficheros .json.
 
@@ -26,6 +28,7 @@ function datosAjax() {
     }
 
 }
+
 
 // Esta función crea los elementos en el DOM para mostrar los tamaños de las pizzas.
 
@@ -54,6 +57,7 @@ function mostrarTamanyos(jsonDoc) {
 
 }
 
+
 // Esta función crea los elementos en el DOM para mostrar los ingredientes para las pizzas.
 
 function mostrarIngredientes(jsonDoc) {
@@ -81,16 +85,7 @@ function mostrarIngredientes(jsonDoc) {
 
 }
 
+
 // REFRESCO.
-// Lo he hecho así porque volviendo a llamar a la función "datosAjax()" se me duplican, triplican, etc...
-// todos los datos que vienen del servidor, tal cual funciona.
 
 refresco.onclick = () => { location.reload(); };
-
-
-
-
-
-
-
-

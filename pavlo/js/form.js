@@ -1,3 +1,17 @@
+/*
+    He observado que si precreo las etiquetas en el HTML y después las lleno
+    desde aquí, consigo que se reinicen o que se pierda el previo valor que
+    tenían consiguiendo que dejen de acumularse los mensajes al pulsar vairas
+    veces un mismo botón.
+
+    Importante para ello usar el .innerHTML, porque si creo la variable de texto
+    con .createTextNode me pasa lo mismo, se me acumula.
+*/
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
 // Almaceno el tamaño y los ingredientes elegidos.
 let tamanyoElegido = [];
 let ingElegidosPrecio = [];
@@ -15,7 +29,7 @@ formulario.addEventListener("submit", (e) => {
     let booleanTamanyo = tamanyo();
     let booleanIngredientes = ingredientes();
 
-    // Si todo devuelve verdadero, calculo el total del pedido.
+    // Si todo devuelve true, calculo el total del pedido.
     if (booleanDatos && booleanTamanyo && booleanIngredientes) obtenerTotal();
 
 });
@@ -26,10 +40,10 @@ function datosCliente() {
     let mensajesError = [];
 
     // Si alguno está vacio, guardo un mensaje en el array.
-    if (nombre.value == "") mensajesError.push("El nombre es obligatorio.");
-    if (direccion.value == "") mensajesError.push("La dirección es obligatoria.");
-    if (telefono.value == "") mensajesError.push("El teléfono es obligatorio.");
-    if (email.value == "") mensajesError.push("El email es obligatorio.");
+    if (nombre.value == "") mensajesError.push("* El Nombre es Obligatorio.");
+    if (direccion.value == "") mensajesError.push("* La Dirección es Obligatoria.");
+    if (telefono.value == "") mensajesError.push("* El Teléfono es Obligatorio.");
+    if (email.value == "") mensajesError.push("* El Email es Obligatorio.");
 
     // Muestro la totalidad de campos vacios.
     erInputs.innerHTML = mensajesError.join(" - ");
@@ -58,7 +72,7 @@ function tamanyo() {
     // Si es 0, ningun radio ha sido checked, muestro error.
     // Si hay alguno seleccionado, devuelvo true.
     if (vacio == 0) {
-        erTamanyo.innerHTML = "Tienes que seleccionar 1 tamaño.";
+        erTamanyo.innerHTML = "Tienes que seleccionar un tamaño.";
         return false;
     } else {
         erTamanyo.innerHTML = "";
@@ -85,7 +99,7 @@ function ingredientes() {
     // Si es 0, ningun checkbox ha sido checked, muestro error.
     // Si hay alguno seleccionado, devuelvo true.
     if (contador == 0) {
-        erIngredientes.innerHTML = "Tienes que seleccionar 1 extra.";
+        erIngredientes.innerHTML = "Tienes que seleccionar cómo mínimo un extra.";
         return false;
     } else {
         erIngredientes.innerHTML = "";
@@ -98,7 +112,7 @@ function ingredientes() {
 function obtenerTotal() {
 
     let jsonHttp = new XMLHttpRequest();
-
+    // Es curioso que las constantes esten disponibles aquí también, sin hacer el module.export.
     jsonHttp.open("GET", URL_SERVER + RECURSO, true);
     jsonHttp.send(null);
     jsonHttp.onreadystatechange = function() {
@@ -129,7 +143,7 @@ function mostrarTotal(jsonDoc) {
     }
 
     // Muestro el precio.
-    console.log("Precio Tamaño: " + precioTamanyo);
-    console.log("Precio Ingredientes: " + precioIngredientes);
+    agradecimiento.innerHTML = "¡Gracias! Hemos recibido tu pedido correctamente."
+    total.innerHTML = "El Precio Total: " + (precioTamanyo + precioIngredientes) + "€";
     
 }

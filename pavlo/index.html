@@ -26,6 +26,8 @@
         <section id="sectionDatos">
 
             <h2>Datos del Cliente:</h2>
+            <!-- Si procede, se mostrarán aquí los errores -->
+            <div><h4 id="erInputs"></h4></div>
 
             <label far="nombre">
                 Nombre:
@@ -44,26 +46,20 @@
                 <input id="email" type="email" placeholder="ejemplo@ejemplo.com"/>
             </label>
 
-            <div><p id="erInputs"></p></div>
-
         </section>
         
         <!-- Tamaño -->
 
         <section id="sectionTamanyo">
-
             <h2>Tamaño de tu Pizza:</h2>
-            <div><p id="erTamanyo"></p></div>
-        
+            <div><h4 id="erTamanyo"></h4></div>
         </section>
         
         <!-- Ingredientes -->
 
         <section id="sectionIngredientes">
-
             <h2>Extras para tu Pizza:</h2>
-            <div><p id="erIngredientes"></p></div>
-
+            <div><h4 id="erIngredientes"></h4></div>
         </section>
 
         <button type="submit">Hacer Pedido</button>
@@ -71,11 +67,15 @@
         
     </form>
 
-    <footer>
+    <!-- Total del pedido, si procede -->
+    <section>
+        <h3 id="agradecimiento"></h3>
+        <h5 id="total"></h5>
+    </section>
 
+    <footer>
         <p>Grupo 01 - Raúl Herrera & Pavlo Dudnyk</p>
         <a href="https://github.com/PABLOKUMAR1993/DWEC_AE2_AJAX">Repositorio de GutHub</a>
-    
     </footer>
 
 </body>
