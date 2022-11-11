@@ -1,0 +1,13 @@
+{
+    "INGREDIENTES": [
+        { "name": "Queso", "value": "eq", "precio": 1 },
+        { "name": "Carne", "value": "ec", "precio": 3 },
+        { "name": "Pescado", "value": "ep", "precio": 2 },
+        { "name": "Verdura", "value": "ev", "precio": 1 }
+    ],
+    "TAMAÑOS": [ 
+        { "name": "Individual", "value": "S", "precio": 5 },
+        { "name": "Mediana", "value": "M", "precio": 10 },
+        { "name": "Familiar", "value": "L", "precio": 15 }
+    ]
+}
