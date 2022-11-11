@@ -5,7 +5,7 @@ let ingPizza = [];
 // Al intentar enviar el formulario se ejecuta el siguiente código:
 formulario.addEventListener("submit", (e) => {
 
-    // Hace que el formulario no se envie por defecto para que no se me recargue la página.
+    // Hace que el formulario no se envie por defecto para que no se recargue la página.
     e.preventDefault();
 
     // Se llaman a los métodos comprobadores.
