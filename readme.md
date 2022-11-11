@@ -62,7 +62,7 @@ A continuación de la captura anterior, se muestra la siguiente captura donde se
 
 ## 4. Actualizar Datos despues de hacer pedido.
 
-Por último, se muestra captura despues de pulsar en refrescar una vez se había pulsado en Hacer pedido a continuación de la captura anterior, don de se puede observa que se han deseleccionado las opciones de Tamaño de Pizza y Extras para tu Pizza:
+Por último, se muestra captura despues de pulsar en refrescar una vez se había pulsado en Hacer pedido a continuación de la captura anterior, dónde se puede observa que se han deseleccionado las opciones de Tamaño de Pizza y Extras para tu Pizza:
 
 ![despuesDeRefrescar](./AE2_AJAX/img/capturasParaReadme/5.despuesDeRefrecar.jpg)
 
