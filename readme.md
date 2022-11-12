@@ -41,30 +41,39 @@ Adicionalmente, Pavlo se ha encargado de la parte de diseño debido a su buen gu
 
 A continuación, se muestra captura de la página de inicio (index.html).<br>
 
-![Index](./AE2_AJAX/img/capturasparaReadme/1.index.jpeg)
+![Index](./AE2_AJAX/img/capturasparaReadme/1.index.png)
 
 ## 2. Hacer pedido con todos los campos vacios.
 En la siguiente captura, se puede observar que al dejar todos los campos de Datos de Cliente vacios y no se han seleccionado ninguna de las opciones de Tamaño de Pizza ni de Extras para la Pizza y trás pulsar el botón de Hacer pedido, se muestran en rojo los avisos correspondientes de cada campo y opciones.
 
-![conErrores](./AE2_AJAX/img/capturasParaReadme/2.conErrores.jpeg)
+![conErrores](./AE2_AJAX/img/capturasParaReadme/2.conErrores.png)
+
+Si el usuario edita el formulario y añade los datos pero se deja alguno sin pone, se eliminaran los errores en los campos rellenos, pero seguiran apareciendo en los campos que siguen con error:
+
+![conErrores2](./AE2_AJAX/img/capturasParaReadme/2.conErrores_2.png)
 
 ## Todos los campos rellenos antes de Hacer Pedido.
 
 En la siguiente captura se puede apreciar el formulario con todos los campos rellenos y opciones seleccionadas antes de pulsar el botón Hacer pedido:
 
-![conCamposRellenos](./AE2_AJAX/img/capturasParaReadme/3.conCamposRellenos.jpeg)
+![conCamposRellenos](./AE2_AJAX/img/capturasParaReadme/3.conCamposRellenos.png)
 
 ## 3. Hacer Pedido con todos los campos rellenos.
 
 A continuación de la captura anterior, se muestra la siguiente captura donde se puede apreciar que trás pulsar el botón Hacer pedido aparece un texto que dice "¡Gracias! Hemos recibido tu pedido correctamente", y debajo el precio con el cálculo total según el Tamaño e ingredientes seleccionados:
 
-![conTotal](./AE2_AJAX/img/capturasParaReadme/4.conTotal.jpeg)
+![conTotal](./AE2_AJAX/img/capturasParaReadme/4.conTotal.png)
 
 ## 4. Actualizar Datos despues de hacer pedido.
 
-Por último, se muestra captura despues de pulsar en refrescar una vez se había pulsado en Hacer pedido a continuación de la captura anterior, dónde se puede observa que se han deseleccionado las opciones de Tamaño de Pizza y Extras para tu Pizza:
+Por último, se muestra captura despues de pulsar en "Actualizar Datos".
+Cómo vemos lo primero que sucede (parando la ejecución), esque se vacian los tamaños e Ingredientes.
 
-![despuesDeRefrescar](./AE2_AJAX/img/capturasParaReadme/5.despuesDeRefrecar.jpg)
+![despuesDeRefrescar](./AE2_AJAX/img/capturasParaReadme/5.despuesDeRefrecar.png)
+
+Para que seguidamente vuelva a hacer una llamada al servidor y vuelva a traer los nuevos tamaños e ingedientes.
+
+![despuesDeRefrescar](./AE2_AJAX/img/capturasParaReadme/5.despuesDeRefrecar_2.png)
 
 ---
 >## Grupo compuesto por:

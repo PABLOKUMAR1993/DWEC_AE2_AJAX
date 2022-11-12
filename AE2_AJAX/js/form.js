@@ -1,17 +1,3 @@
-/*
-    He observado que si precreo las etiquetas en el HTML y después las lleno
-    desde aquí, consigo que se reinicen o que se pierda el previo valor que
-    tenían consiguiendo que dejen de acumularse los mensajes al pulsar vairas
-    veces un mismo botón.
-
-    Importante para ello usar el .innerHTML, porque si creo la variable de texto
-    con .createTextNode me pasa lo mismo, se me acumula.
-*/
-
-
-/////////////////////////////////////////////////////////////////////////////
-
-
 // Almaceno el tamaño y los ingredientes elegidos.
 let tamanyoElegido = [];
 let ingElegidosPrecio = [];
@@ -160,8 +146,6 @@ function mostrarTotal(jsonDoc) {
     for (let i=0; i<jsonDoc.INGREDIENTES.length; i++) {
         if (ingElegidosPrecio[i] == 1) precioIngredientes += jsonDoc.INGREDIENTES[i].precio;
     }
-
-    console.log("estoy dentro");
 
     // Muestro el precio.
     agradecimiento.innerHTML = "¡Gracias! Hemos recibido tu pedido correctamente."
