@@ -48,7 +48,7 @@ En la siguiente captura, se puede observar que al dejar todos los campos de Dato
 
 ![conErrores](./AE2_AJAX/img/capturasParaReadme/2.conErrores.png)
 
-Si el usuario edita el formulario y añade los datos pero se deja alguno sin pone, se eliminaran los errores en los campos rellenos, pero seguiran apareciendo en los campos que siguen con error:
+Si el usuario edita el formulario y añade los datos pero se deja alguno sin poner, se eliminaran los errores en los campos rellenos, pero seguiran apareciendo en los campos que siguen con error:
 
 ![conErrores2](./AE2_AJAX/img/capturasParaReadme/2.conErrores_2.png)
 
